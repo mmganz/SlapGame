@@ -1,16 +1,16 @@
-var health = 100; 
+/* var health = 100; 
 var slap = 5; 
 var punch = 10;
 var kick = 20; 
-var hadouken = 35;
+var hadouken = 35; */
 
 var Player = function(name, health, slap, punch, kick, hadouken){
     this.name = name;
-    this.health = health;
-    this.slap = slap;
-    this.punch = punch;
-    this.kick = kick;
-    this.hadouken = hadouken
+    this.health = 100;
+    this.slap = 5;
+    this.punch = 10;
+    this.kick = 20;
+    this.hadouken = 35
 }
 
 var Item = function(name, modifier, description){
@@ -30,38 +30,41 @@ mace: new Item('mace', 0.7, 'mace')
 
 items[items.shield, items.sword, items.mace] 
 
+p1 = new Player('test');
+
+
 function onSlap(){
-  health -= slap
+  p1.health -= p1.slap
   update()
-  return health 
+  return p1.health 
 }
 function onPunch(){
-  health -= punch
+  p1.health -= p1.punch
   update()
-  return health
+  return p1.health
 }
 
 function onKick(){
-    health -= kick   
+    p1.health -= p1.kick   
     update()
-    return health
+    return p1.health
 }
 
 function onHadouken(){
-    health -= hadouken
+    p1.health -= hadouken
     update()
-    return health
+    return p1.health
 }
 
 function reset(){
-  health = 100
+  p1.health = 100
   update()
 }
 
 function update(){
-  if (health <= 0){
-    health = 0
+  if (p1.health <= 0){
+    p1.health = 0
   }
   var healthElem = document.getElementById('health')
-  healthElem.innerHTML = health
+  healthElem.innerHTML = p1.health
 }
