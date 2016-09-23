@@ -29,13 +29,12 @@ var Item = function(name, modifier, description){
     this.draw = function(){return '<div class="item">'+ this.name +'</div>'}
 }
 
-
 var items = {
-shield:new Item('shield', 0.3, "shield"),
-sword:new Item('sword', 0.2, 'nice sword'),
-mace: new Item('mace', 0.7, 'mace')
+shield: shield = new Item('shield', 0.3, "shield"),
+sword: sword = new Item('sword', 0.2, 'nice sword'),
+mace: mace =new Item('mace', 0.7, 'mace')
 }
-
+console.log(items.shield.name)
 
 var p1 = new Player('test', 100, 5, 10, 40, 20);
 
