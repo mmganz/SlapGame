@@ -4,6 +4,19 @@ var punch = 10;
 var kick = 20; 
 var hadouken = 35;
 
+var Item = function(name, modifier, description){
+    this.name = name;
+    this.modifier = modifier;
+    this.description = description;
+    this.draw = function(){}
+}
+
+var items = {
+shield:new Item('shield', 0.3, "shield"),
+sword:new Item('sword', 0.2, 'nice sword'),
+mace: new Item('mace', 0.7, 'mace')
+}
+
 function onSlap(){
   health -= slap
   update()
@@ -34,7 +47,7 @@ function reset(){
 
 function update(){
   if (health <= 0){
-    health = 0 
+    health = 0
   }
   var healthElem = document.getElementById('health')
   healthElem.innerHTML = health
