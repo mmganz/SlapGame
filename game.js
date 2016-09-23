@@ -1,8 +1,8 @@
-/* var health = 100; 
-var slap = 5; 
-var punch = 10;
-var kick = 20; 
-var hadouken = 35; */
+// var health = 100; 
+// var slap = 5; 
+// var punch = 10;
+// var kick = 20; 
+// var hadouken = 35; 
 
 var Player = function(name, health, slap, punch, kick, hadouken){
     this.name = name;
