@@ -50,7 +50,7 @@ function onKick(){
 }
 
 function onHadouken(){
-    p1.health -= hadouken
+    p1.health -= p1.hadouken
     update()
     return p1.health
 }
