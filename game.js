@@ -11,7 +11,15 @@ var Player = function(name, health, slap, punch, kick, hadouken){
     this.punch = 10;
     this.kick = 20;
     this.hadouken = 35;
-    this.items = [items.shield, items.sword, items.mace]
+    this.items = [items.shield, items.sword, items.mace];
+    this.addMods = function(items){
+        var modTotal =0 
+        for (var i = 0; i < items.length; i++){
+            modTotal+= items[i].modifier
+        }
+        return modTotal; 
+    }
+    
 }
 
 var Item = function(name, modifier, description){
