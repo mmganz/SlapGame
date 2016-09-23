@@ -2,6 +2,7 @@ var health = 100;
 var slap = 5; 
 var punch = 10;
 var kick = 20; 
+var hadouken = 35;
 
 function onSlap(){
   health -= slap
@@ -16,6 +17,12 @@ function onPunch(){
 
 function onKick(){
     health -= kick   
+    update()
+    return health
+}
+
+function onHadouken(){
+    health -= hadouken
     update()
     return health
 }
