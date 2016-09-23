@@ -12,10 +12,10 @@ var Player = function(name, health, slap, punch, kick, hadouken){
     this.kick = kick;
     this.hadouken = hadouken;
     this.items = [items.shield, items.sword, items.mace];
-    this.addMods = function(items){
+    this.addMods = function(){
         var modTotal =0 
-        for (var i = 0; i < items.length; i++){
-            modTotal+= items[i].modifier
+        for (var i = 0; i < this.items.length; i++){
+            modTotal+= this.items[i].modifier
         }
         return modTotal; 
     }
@@ -36,8 +36,8 @@ mace: mace =new Item('mace', 0.7, 'mace')
 }
 console.log(items.shield.name)
 
-var p1 = new Player('test', 100, 5, 10, 40, 20);
 
+var p1 = new Player('test', 100, 5, 10, 40, 20);
 
 function onSlap(){
   p1.health -= p1.slap
