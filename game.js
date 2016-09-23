@@ -4,6 +4,11 @@ var punch = 10;
 var kick = 20; 
 var hadouken = 35;
 
+var Player = function(name, health){
+    this.name = name;
+    this.health = health
+}
+
 var Item = function(name, modifier, description){
     this.name = name;
     this.modifier = modifier;
@@ -11,11 +16,15 @@ var Item = function(name, modifier, description){
     this.draw = function(){}
 }
 
+
 var items = {
 shield:new Item('shield', 0.3, "shield"),
 sword:new Item('sword', 0.2, 'nice sword'),
 mace: new Item('mace', 0.7, 'mace')
 }
+
+
+items[items.shield, items.sword, items.mace] 
 
 function onSlap(){
   health -= slap
