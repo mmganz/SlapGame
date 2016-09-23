@@ -4,9 +4,13 @@ var punch = 10;
 var kick = 20; 
 var hadouken = 35;
 
-var Player = function(name, health){
+var Player = function(name, health, slap, punch, kick, hadouken){
     this.name = name;
-    this.health = health
+    this.health = health;
+    this.slap = slap;
+    this.punch = punch;
+    this.kick = kick;
+    this.hadouken = hadouken
 }
 
 var Item = function(name, modifier, description){
