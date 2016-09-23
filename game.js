@@ -6,11 +6,11 @@
 
 var Player = function(name, health, slap, punch, kick, hadouken){
     this.name = name;
-    this.health = 100;
-    this.slap = 5;
-    this.punch = 10;
-    this.kick = 20;
-    this.hadouken = 35;
+    this.health = health;
+    this.slap = slap;
+    this.punch = punch;
+    this.kick = kick;
+    this.hadouken = hadouken;
     this.items = [items.shield, items.sword, items.mace];
     this.addMods = function(items){
         var modTotal =0 
@@ -19,14 +19,14 @@ var Player = function(name, health, slap, punch, kick, hadouken){
         }
         return modTotal; 
     }
-    
+
 }
 
 var Item = function(name, modifier, description){
     this.name = name;
     this.modifier = modifier;
     this.description = description;
-    this.draw = function(){}
+    this.draw = function(){return '<div class="item">'+ this.name +'</div>'}
 }
 
 
@@ -37,7 +37,7 @@ mace: new Item('mace', 0.7, 'mace')
 }
 
 
-var p1 = new Player('test');
+var p1 = new Player('test', 100, 5, 10, 40, 20);
 
 
 function onSlap(){
