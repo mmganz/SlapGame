@@ -10,7 +10,8 @@ var Player = function(name, health, slap, punch, kick, hadouken){
     this.slap = 5;
     this.punch = 10;
     this.kick = 20;
-    this.hadouken = 35
+    this.hadouken = 35;
+    this.items = [items.shield, items.sword, items.mace]
 }
 
 var Item = function(name, modifier, description){
@@ -28,9 +29,7 @@ mace: new Item('mace', 0.7, 'mace')
 }
 
 
-items[items.shield, items.sword, items.mace] 
-
-p1 = new Player('test');
+var p1 = new Player('test');
 
 
 function onSlap(){
