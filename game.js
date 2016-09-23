@@ -14,6 +14,12 @@ function onPunch(){
   return health
 }
 
+function onKick(){
+    health -= kick   
+    update()
+    return health
+}
+
 function reset(){
   health = 100
   update()
