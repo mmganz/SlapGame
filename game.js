@@ -5,7 +5,7 @@ var Player = function(name, health, water, sunshine){
     this.sunshine = sunshine;
 }
 
-var p1 = new Player('test', 0, 5, 10);
+var p1 = new Player('test', 0, 10, 20);
 
 function onWater(){
   p1.health += p1.water
@@ -39,11 +39,11 @@ function update(){
 function changeImage(){ 
     var cImage = document.getElementById('image')
     if(p1.health == 0){
-        cImage.src="flowers/blank.png"
+        cImage.src="flowers/bulb.png"
     }
-    else if(p1.health > 0 && p1.health < 5){
-        cImage.src="flowers/blank.png"
-    }else if(p1.health >=5 && p1.health <20){
+    else if(p1.health > 0 && p1.health < 10){
+        cImage.src="flowers/bulb.png"
+    }else if(p1.health >=10 && p1.health <20){
         cImage.src="flowers/1.png"
     }else if(p1.health >=20 && p1.health <30){
         cImage.src="flowers/2.png"
