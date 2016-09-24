@@ -72,12 +72,7 @@ function update(){
 
 function changeImage(){
     var cImage = document.getElementById('flower')
-    if (p1.health <= 10){
-        cImage.src = "flowers/blank.png"
+    if (p1.health > 10){
+        cImage.src = "flowers/1.png"
     }
-  else if (p1.health >= 10) {
-      cImage.src = "flowers/1.png"
-  } else if(p1.health >= 20){
-      cImage.src = "flowers/2.png"
-  }
 }
