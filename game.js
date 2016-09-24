@@ -41,23 +41,27 @@ var p1 = new Player('test', 0, 5, 10, 20);
 function onSlap(){
   p1.health += p1.slap
   update()
+  cImage()
   return p1.health 
 }
 function onPunch(){
   p1.health += p1.punch
   update()
+  cImage()
   return p1.health
 }
 
 function onHadouken(){
     p1.health -= p1.hadouken
     update()
+    cImage()
     return p1.health
 }
 
 function reset(){
   p1.health = 0
   update()
+  cImage()
 }
 
 function update(){
@@ -70,10 +74,9 @@ function update(){
   healthElem.innerHTML = p1.health 
 }
 
-function changeImage(){
-    debugger 
-    var cImage = document.getElementById('image')
+function changeImage(){ 
     if (p1.health >= 90){
         cImage.src = 'flowers/8.png'
     }else{cImage.src = 'flower/1.png'}
+     var cImage = document.getElementById('image')
 }
