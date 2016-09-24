@@ -41,27 +41,27 @@ var p1 = new Player('test', 0, 5, 10, 20);
 function onSlap(){
   p1.health += p1.slap
   update()
-  cImage()
+  changeImage()
   return p1.health 
 }
 function onPunch(){
   p1.health += p1.punch
   update()
-  cImage()
+  changeImage()
   return p1.health
 }
 
 function onHadouken(){
     p1.health -= p1.hadouken
     update()
-    cImage()
+    changeImage()
     return p1.health
 }
 
 function reset(){
   p1.health = 0
   update()
-  cImage()
+  changeImage()
 }
 
 function update(){
