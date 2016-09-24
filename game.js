@@ -4,12 +4,11 @@
 // var kick = 20; 
 // var hadouken = 35; 
 
-var Player = function(name, health, slap, punch, kick, hadouken){
+var Player = function(name, health, slap, punch, hadouken){
     this.name = name;
     this.health = health;
     this.slap = slap;
     this.punch = punch;
-    this.kick = kick;
     this.hadouken = hadouken;
     this.items = [items.shield, items.sword, items.mace];
     this.addMods = function(){
@@ -37,7 +36,7 @@ mace: mace =new Item('mace', 0.7, 'mace')
 console.log(items.shield.name)
 
 
-var p1 = new Player('test', 0, 5, 10, 40, 20);
+var p1 = new Player('test', 0, 5, 10, 20);
 
 function onSlap(){
   p1.health += p1.slap
@@ -48,12 +47,6 @@ function onPunch(){
   p1.health += p1.punch
   update()
   return p1.health
-}
-
-function onKick(){
-    p1.health += p1.kick   
-    update()
-    return p1.health
 }
 
 function onHadouken(){
