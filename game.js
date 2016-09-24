@@ -80,3 +80,4 @@ function changeImage(){
         cImage.src = 'flowers/8.png'
     }else{cImage.src = 'flower/1.png'
 }
+}
