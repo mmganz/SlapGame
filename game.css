@@ -30,5 +30,6 @@ h1{
 
 .dummy{
   margin-top:200px;
+  max-width:75%;
   position:absolute;
 }
