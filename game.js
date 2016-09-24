@@ -64,6 +64,9 @@ function update(){
   if (p1.health >= 100){
     p1.health = 100
   }
+  if(p1.health <=0){
+      p1.health = 100
+  }
   var healthElem = document.getElementById('health')
   healthElem.innerHTML = p1.health
 }
