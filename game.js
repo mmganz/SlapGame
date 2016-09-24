@@ -1,61 +1,23 @@
-// var health = 100; 
-// var slap = 5; 
-// var punch = 10;
-// var kick = 20; 
-// var hadouken = 35; 
-
-var Player = function(name, health, slap, punch, hadouken){
+var Player = function(name, health, water, sunshine){
     this.name = name;
     this.health = health;
-    this.slap = slap;
-    this.punch = punch;
-    this.hadouken = hadouken;
-    this.items = [items.shield, items.sword, items.mace];
-    this.addMods = function(){
-        var modTotal =0 
-        for (var i = 0; i < this.items.length; i++){
-            modTotal+= this.items[i].modifier
-        }
-        return modTotal; 
-    }
-
+    this.water = water;
+    this.sunshine = sunshine;
 }
 
-var Item = function(name, modifier, description){
-    this.name = name;
-    this.modifier = modifier;
-    this.description = description;
-    this.draw = function(){return '<div class="item">'+ this.name +'</div>'}
-}
+var p1 = new Player('test', 0, 5, 10);
 
-var items = {
-shield: shield = new Item('shield', 0.3, "shield"),
-sword: sword = new Item('sword', 0.2, 'nice sword'),
-mace: mace =new Item('mace', 0.7, 'mace')
-}
-console.log(items.shield.name)
-
-
-var p1 = new Player('test', 0, 5, 10, 99);
-
-function onSlap(){
-  p1.health += p1.slap
+function onWater(){
+  p1.health += p1.water
   update()
   changeImage()
   return p1.health 
 }
-function onPunch(){
-  p1.health += p1.punch
+function onSunshine(){
+  p1.health += p1.sunshine
   update()
   changeImage()
   return p1.health
-}
-
-function onHadouken(){
-    p1.health -= p1.hadouken
-    update()
-    changeImage()
-    return p1.health
 }
 
 function reset(){
@@ -79,9 +41,9 @@ function changeImage(){
     if(p1.health == 0){
         cImage.src="flowers/blank.png"
     }
-    else if(p1.health > 0 && p1.health < 10){
+    else if(p1.health > 0 && p1.health < 5){
         cImage.src="flowers/blank.png"
-    }else if(p1.health >=10 && p1.health <20){
+    }else if(p1.health >=5 && p1.health <20){
         cImage.src="flowers/1.png"
     }else if(p1.health >=20 && p1.health <30){
         cImage.src="flowers/2.png"
