@@ -36,7 +36,7 @@ mace: mace =new Item('mace', 0.7, 'mace')
 console.log(items.shield.name)
 
 
-var p1 = new Player('test', 0, 5, 10, 20);
+var p1 = new Player('test', 0, 5, 10, 99);
 
 function onSlap(){
   p1.health += p1.slap
@@ -76,8 +76,28 @@ function update(){
 
 function changeImage(){ 
     var cImage = document.getElementById('image')
-    if (p1.health >= 90){
-        cImage.src = "flowers/8.png"
-    }else{cImage.src = "flowers/1.png"
-}
-}
+    if(p1.health == 0){
+        cImage.src="flowers/blank.png"
+    }
+    else if(p1.health >0 && < 10){
+        cImage.src="flowers/blank.png"
+    }else if(p1.health >=10 && <20){
+        cImage.src="flowers/1.png"
+    }else if(p1.health >=20 && <30){
+        cImage.src="flowers/2.png"
+    }else if(p1.health >=30 && <40){
+        cImage.src="flowers/3.png"
+    }else if(p1.health >=40 && <50){
+        cImage.src="flowers/4.png"
+    }else if(p1.health >=50 && <60){
+        cImage.src="flowers/5.png"
+    }else if(p1.health >=60 && <70){
+        cImage.src="flowers/6.png"
+    }else if(p1.health >=70 && <80){
+        cImage.src="flowers/7.png"
+    }else if(p1.health>=80 && <99){
+        cImage.src="flowers/8.png"
+    }else if(p1.health >99){
+        cImage.src="flowers/large.gif"
+    }
+    }
