@@ -29,5 +29,7 @@ h1{
 }
 
 .dummy{
+  margin-top:200px;
   background: url(http://images.clipartbro.com/58/animated-flower-pictures-58212.png);
+  position:absolute;
 }
