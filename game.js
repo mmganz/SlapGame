@@ -67,5 +67,10 @@ function update(){
       p1.health = 0
   }
   var healthElem = document.getElementById('health')
-  healthElem.innerHTML = p1.health
+  healthElem.innerHTML = p1.health 
+
+  var cImage = document.getElementById('flower')
+  if (p1.health >= 10) {
+      cImage.src = "flowers/1.png"
+  }
 }
