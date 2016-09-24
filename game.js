@@ -71,6 +71,7 @@ function update(){
 }
 
 function changeImage(){
+    debugger 
     var cImage = document.getElementById('image')
     if (p1.health >= 90){
         cImage.src = 'flowers/8.png'
