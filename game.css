@@ -28,7 +28,6 @@ h1{
   text-align: center;
 }
 
-.dummy{
-  margin-top:200px;
-  position:relative;
+.dummy{ 
+   position:relative;
 }
