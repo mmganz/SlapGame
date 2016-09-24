@@ -37,21 +37,21 @@ mace: mace =new Item('mace', 0.7, 'mace')
 console.log(items.shield.name)
 
 
-var p1 = new Player('test', 100, 5, 10, 40, 20);
+var p1 = new Player('test', 0, 5, 10, 40, 20);
 
 function onSlap(){
-  p1.health -= p1.slap
+  p1.health += p1.slap
   update()
   return p1.health 
 }
 function onPunch(){
-  p1.health -= p1.punch
+  p1.health += p1.punch
   update()
   return p1.health
 }
 
 function onKick(){
-    p1.health -= p1.kick   
+    p1.health += p1.kick   
     update()
     return p1.health
 }
@@ -63,13 +63,13 @@ function onHadouken(){
 }
 
 function reset(){
-  p1.health = 100
+  p1.health = 0
   update()
 }
 
 function update(){
-  if (p1.health <= 0){
-    p1.health = 0
+  if (p1.health >= 100){
+    p1.health = 100
   }
   var healthElem = document.getElementById('health')
   healthElem.innerHTML = p1.health
