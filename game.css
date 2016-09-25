@@ -17,6 +17,10 @@ body{
   border: none;
 }
 
+.button(
+  -webkit-appearance: none;
+)
+
 .player{
   display: flex;
 }
