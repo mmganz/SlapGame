@@ -16,6 +16,11 @@ body{
     border: none;
 }
 
+.reset{
+  height: 100px;
+  width: 100px;
+
+}
 
 .player{
   display: flex;
