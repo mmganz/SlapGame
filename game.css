@@ -4,6 +4,11 @@ body{
   font-family: david libre;
 }
 
+button{
+  border:#7FB27F;
+  background-color:white
+}
+
 .stage{
   display:flex;
   align-items: center;
