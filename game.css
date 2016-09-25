@@ -1,6 +1,7 @@
 body{
   background-color:white;
   background-size: cover;
+  font-family: david libre;
 }
 
 .stage{
@@ -8,19 +9,17 @@ body{
   align-items: center;
   justify-content: space-around;
   margin-bottom: 50px;
+  background-color:white;
 }
+
+.reset{
+  border
+}
+
 .player{
   display: flex;
 }
 
-img.invert {
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    filter: FlipH;
-    -ms-filter: "FlipH";
-}
 
 h1{
   color: blue;
