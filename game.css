@@ -6,7 +6,8 @@ body{
 
 button{
   border:#7FB27F;
-  background-color:white
+  background-color:white;
+  font-size:25;
 }
 
 .stage{
