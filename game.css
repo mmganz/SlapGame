@@ -12,14 +12,11 @@ body{
   background-color:white;
 }
 
-.imgContainer1{
-  background-color: transparent;
-  border: none;
+.buttons{
+   background-color: transparent;
+    border: none;
 }
 
-.button(
-  -webkit-appearance: none;
-)
 
 .player{
   display: flex;
