@@ -38,7 +38,9 @@ function update(){
 
 function changeImage(){ 
     var cImage = document.getElementById('image')
-    if(p1.health > 0 && p1.health < 10){
+    if(p1.health == 0){
+        cImage.src="flowers/roots.png"
+    }else if(p1.health > 0 && p1.health < 10){
         cImage.src="flowers/roots.png"
     }else if(p1.health >=10 && p1.health <20){
         cImage.src="flowers/bulb.png"
