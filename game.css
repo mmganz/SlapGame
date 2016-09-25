@@ -17,8 +17,9 @@ body{
 }
 
 .reset{
-  height: 100px;
+  height: 105px;
   width: 100px;
+  margin-left:2px;
 
 }
 
