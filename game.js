@@ -58,8 +58,7 @@ function changeImage(){
         cImage.src="flowers/7.png"
     }else if(p1.health>=90 && p1.health <99){
         cImage.src="flowers/8.png"
-    }
-    else(p1.health >99){
+    }else{
         cImage.src="flowers/large.gif"
     }
     }
