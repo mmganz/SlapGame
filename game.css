@@ -15,6 +15,7 @@ body{
 .buttons{
    background-color: transparent;
     border: none;
+    -webkit-appearance: none;
 }
 
 
