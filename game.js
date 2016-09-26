@@ -15,9 +15,9 @@ function onWater(){
 }
 function onSunshine(){
   p1.health += p1.sunshine
-  update()
-  changeImage()
-  return p1.health
+//   update()
+//   changeImage()
+//   return p1.health
 }
 
 function reset(){
@@ -25,7 +25,7 @@ function reset(){
   update()
   changeImage()
 }
-
+// DO NOT REPEAT YOURSELF
 function update(){
   if (p1.health >= 100){
     p1.health = 100}
@@ -35,7 +35,13 @@ function update(){
   var healthElem = document.getElementById('health')
   healthElem.innerHTML = p1.health 
 }
-
+// McCaller funciton
+function caller(func){
+    func;
+    update()
+    changeImage()
+}
+// caller(reset())
 function changeImage(){ 
     var cImage = document.getElementById('image')
     if(p1.health == 0){
@@ -64,3 +70,6 @@ function changeImage(){
         cImage.src="flowers/large.gif"
     }
     }
+// var imgNum = 0
+// imgNum++
+// document.getElementById(img).src = "flowers/"+imgNum + ".png"
